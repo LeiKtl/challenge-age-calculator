@@ -1,0 +1,87 @@
+$white-bg : hsl(0, 0%, 100%);
+$lightgrey-bg : hsl(0, 0%, 86%);
+$smokeygrey-color : hsl(0, 1%, 44%);
+$primary-color : hsl(0, 0%, 8%);
+$secondary-color : hsl(259, 100%, 65%);
+$tertiary-color : hsl(0, 100%, 67%);
+
+body {
+    margin: 40px 20px;
+    font-family: "Poppins";
+    color: $primary-color;
+    background-color: $lightgrey-bg;
+}
+
+.container-form {
+    padding: 60px 25px;
+    background-color: $white-bg;
+    border-radius: 5% 5% 30% 5%;
+}
+
+.display {
+    &-form {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-between;
+    }
+    &-input {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        input {
+            max-width: 60px;
+            height: 40px;
+            border: 1px solid $smokeygrey-color;
+            border-radius: 10%;
+            font-family: "Poppins";
+            font-size: 20px;
+            padding-left: 15px;
+        }
+        label {
+            color: $smokeygrey-color;
+        }
+    }
+    &-button {
+        text-align: center;
+        margin: 20px 0;
+
+        span {
+            width: 100%;
+            background-color: $smokeygrey-color;
+            display: inline-block;
+            height: 0.5px;
+            top: 30px;
+            position: relative;
+        }
+        &-style {
+            background-color: $secondary-color;
+            border-radius: 50%;
+            border: none;
+            position: relative;
+            &-svg {
+                margin: 10px;
+                width: 25px;
+                height: 23px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.form-result {
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 800;
+
+    p {
+        margin: 0;
+
+        #years,
+        #months,
+        #days {
+            color: $secondary-color;
+        }
+    }
+}
