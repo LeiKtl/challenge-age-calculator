@@ -1,21 +1,52 @@
 body {
-  margin: 40px 20px;
   font-family: "Poppins";
   color: hsl(0, 0%, 8%);
   background-color: hsl(0, 0%, 86%);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 720px) {
+  body {
+    margin: auto 15%;
+  }
+}
+@media screen and (min-width: 900px) {
+  body {
+    margin: auto 20%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  body {
+    margin: auto 25%;
+  }
+}
+@media screen and (min-width: 1150px) {
+  body {
+    margin: auto 30%;
+  }
+}
+
+footer {
+  height: 50px;
 }
 
 .container-form {
-  padding: 60px 25px;
+  margin: 50px 15px;
+  padding: 50px 25px;
   background-color: hsl(0, 0%, 100%);
   border-radius: 5% 5% 30% 5%;
+}
+@media screen and (min-width: 720px) {
+  .container-form {
+    padding: 50px 40px;
+  }
 }
 
 .display-form {
   display: flex;
   gap: 15px;
-  align-items: center;
-  justify-content: space-between;
 }
 .display-input {
   display: flex;
@@ -24,28 +55,39 @@ body {
   letter-spacing: 2px;
 }
 .display-input input {
-  max-width: 60px;
-  height: 40px;
-  border: 1px solid hsl(0, 1%, 44%);
+  width: 70%;
+  height: 50px;
+  border: 1px solid hsl(0, 0%, 86%);
   border-radius: 10%;
   font-family: "Poppins";
   font-size: 20px;
   padding-left: 15px;
 }
+@media screen and (min-width: 720px) {
+  .display-input input {
+    width: 50%;
+  }
+}
 .display-input label {
   color: hsl(0, 1%, 44%);
+  font-size: 12px;
 }
 .display-button {
   text-align: center;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 .display-button span {
   width: 100%;
-  background-color: hsl(0, 1%, 44%);
+  background-color: hsl(0, 0%, 86%);
   display: inline-block;
   height: 0.5px;
-  top: 30px;
+  top: 33px;
   position: relative;
+}
+@media screen and (min-width: 720px) {
+  .display-button span {
+    top: 45px;
+  }
 }
 .display-button-style {
   background-color: hsl(259, 100%, 65%);
@@ -53,17 +95,35 @@ body {
   border: none;
   position: relative;
 }
+@media screen and (min-width: 720px) {
+  .display-button-style {
+    left: 45%;
+  }
+}
 .display-button-style-svg {
   margin: 10px;
   width: 25px;
-  height: 23px;
+  height: 30px;
   font-weight: bold;
+}
+@media screen and (min-width: 720px) {
+  .display-button-style-svg {
+    width: 45px;
+    height: 55px;
+  }
 }
 
 .form-result {
   font-size: 50px;
   font-style: italic;
   font-weight: 800;
+  line-height: 60px;
+}
+@media screen and (min-width: 720px) {
+  .form-result {
+    font-size: 65px;
+    line-height: 75px;
+  }
 }
 .form-result p {
   margin: 0;
