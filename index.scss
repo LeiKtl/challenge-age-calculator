@@ -6,7 +6,6 @@ $secondary-color : hsl(259, 100%, 65%);
 $tertiary-color : hsl(0, 100%, 67%);
 
 body {
-    // margin: 40px 20px;
     font-family: "Poppins";
     color: $primary-color;
     background-color: $lightgrey-bg;
@@ -30,102 +29,152 @@ body {
 
 footer {
     height: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 0px 20px;
+    text-align: center;
 }
 
-.container-form {
-    margin: 50px 15px;
-    padding: 50px 25px;
-    background-color: $white-bg;
-    border-radius: 5% 5% 30% 5%;
-    @media screen and (min-width: 720px) {
-        padding: 50px 40px;
+// .input-error {
+//     border: 1px solid $tertiary-color;
+// }
+
+// .label-error {
+//     color: $tertiary-color;
+// }
+
+.form {
+    &_container {
+        margin: 50px 15px;
+        padding: 50px 25px;
+        background-color: $white-bg;
+        border-radius: 5% 5% 30% 5%;
+        @media screen and (min-width: 720px) {
+            padding: 50px 40px;
+        }
     }
-}
-
-.display {
-    &-form {
+    
+    &_dates {
         display: flex;
         gap: 15px;
-    }
-    &-input {
-        display: flex;
-        flex-direction: column;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        input {
-            width: 70%;
-            height: 50px;
-            border: 1px solid $lightgrey-bg;
-            border-radius: 10%;
-            font-family: "Poppins";
-            font-size: 20px;
-            padding-left: 15px;
+    
+        &_details {
+            display: flex;
+            flex-direction: column;
+            min-width: 50px;
+            max-width: 100px;
             @media screen and (min-width: 720px) {
-                width: 50%;
-            }
-        }
-        label {
-            color: $smokeygrey-color;
-            font-size: 12px;
-        }
-    }
-    &-button {
-        text-align: center;
-        margin: 10px 0;
-
-        span {
-            width: 100%;
-            background-color: $lightgrey-bg;
-            display: inline-block;
-            height: 0.5px;
-            top: 33px;
-            position: relative;
-            @media screen and (min-width: 720px) {
-                top: 45px;
-            }
-        }
-        &-style {
-            background-color: $secondary-color;
-            border-radius: 50%;
-            border: none;
-            position: relative;
-            @media screen and (min-width: 720px) {
-                left: 45%;
+                min-width: 110px;
+                max-width: 160px;
             }
 
-            &-svg {
-                margin: 10px;
-                width: 25px;
-                height: 30px;
-                font-weight: bold;
-
+            .label_day_error {
+                color: $tertiary-color;
+            }
+            
+            &_input {
+                width: 80%;
+                height: 50px;
+                border: 1px solid $lightgrey-bg;
+                border-radius: 10%;
+                font-family: "Poppins";
+                font-size: 18px;
+                padding-left: 15px;
+                margin: 5px 0;
                 @media screen and (min-width: 720px) {
-                    width: 45px;
-                    height: 55px; 
+                    width: 80%;
+                    font-size: 32px;
+                    height: 60px;
+                }
+                @media screen and (min-width: 900px) {
+                    width: 80%;
+                }
+                &:focus {
+                    outline: 1px solid $smokeygrey-color;
+                }
+
+                &_error {
+                    border-color: $tertiary-color;
+                }
+            }
+            &_label {
+                color: $smokeygrey-color;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            &_paragraph_day,
+            &_paragraph_month,
+            &_paragraph_year {
+                display: none;
+                color: $tertiary-color;
+                font-weight: 400;
+                font-style: italic;
+                font-size: 10px;
+                margin: 0;
+                @media screen and (min-width: 720px) {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        &_button {
+            text-align: center;
+            margin: 10px 0;
+    
+            &_line {
+                width: 100%;
+                background-color: $lightgrey-bg;
+                display: inline-block;
+                height: 0.5px;
+                top: 33px;
+                position: relative;
+                @media screen and (min-width: 720px) {
+                    top: 32px;
+                }
+            }
+            &_style {
+                background-color: $secondary-color;
+                border-radius: 50%;
+                border: none;
+                position: relative;
+                @media screen and (min-width: 720px) {
+                    left: 45%;
+                    top: -10px;
+                }
+    
+                & svg {
+                    margin: 10px;
+                    width: 25px;
+                    height: 30px;
+                    font-weight: bold;
+    
+                    @media screen and (min-width: 720px) {
+                        width: 45px;
+                        height: 55px; 
+                    }
                 }
             }
         }
     }
-}
-
-.form-result {
-    font-size: 50px;
-    font-style: italic;
-    font-weight: 800;
-    line-height: 60px;
     
-    @media screen and (min-width: 720px) {
-        font-size: 65px;
-        line-height: 75px;
-    }
-
-    p {
-        margin: 0;
-
-        #years,
-        #months,
-        #days {
-            color: $secondary-color;
+    &_result {
+        font-size: 50px;
+        font-style: italic;
+        font-weight: 800;
+        line-height: 60px;
+        @media screen and (min-width: 720px) {
+            font-size: 65px;
+            line-height: 75px;
+        }
+    
+        &_content {
+            margin: 0;
+            .years,
+            .months,
+            .days {
+                color: $secondary-color;
+            }
         }
     }
 }

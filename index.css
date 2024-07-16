@@ -30,53 +30,94 @@ body {
 
 footer {
   height: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 0px 20px;
+  text-align: center;
 }
 
-.container-form {
+.form_container {
   margin: 50px 15px;
   padding: 50px 25px;
   background-color: hsl(0, 0%, 100%);
   border-radius: 5% 5% 30% 5%;
 }
 @media screen and (min-width: 720px) {
-  .container-form {
+  .form_container {
     padding: 50px 40px;
   }
 }
-
-.display-form {
+.form_dates {
   display: flex;
   gap: 15px;
 }
-.display-input {
+.form_dates_details {
   display: flex;
   flex-direction: column;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  min-width: 50px;
+  max-width: 100px;
 }
-.display-input input {
-  width: 70%;
+@media screen and (min-width: 720px) {
+  .form_dates_details {
+    min-width: 110px;
+    max-width: 160px;
+  }
+}
+.form_dates_details .label_day_error {
+  color: hsl(0, 100%, 67%);
+}
+.form_dates_details_input {
+  width: 80%;
   height: 50px;
   border: 1px solid hsl(0, 0%, 86%);
   border-radius: 10%;
   font-family: "Poppins";
-  font-size: 20px;
+  font-size: 18px;
   padding-left: 15px;
+  margin: 5px 0;
 }
 @media screen and (min-width: 720px) {
-  .display-input input {
-    width: 50%;
+  .form_dates_details_input {
+    width: 80%;
+    font-size: 32px;
+    height: 60px;
   }
 }
-.display-input label {
+@media screen and (min-width: 900px) {
+  .form_dates_details_input {
+    width: 80%;
+  }
+}
+.form_dates_details_input:focus {
+  outline: 1px solid hsl(0, 1%, 44%);
+}
+.form_dates_details_input_error {
+  border-color: hsl(0, 100%, 67%);
+}
+.form_dates_details_label {
   color: hsl(0, 1%, 44%);
   font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
-.display-button {
+.form_dates_details_paragraph_day, .form_dates_details_paragraph_month, .form_dates_details_paragraph_year {
+  display: none;
+  color: hsl(0, 100%, 67%);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 10px;
+  margin: 0;
+}
+@media screen and (min-width: 720px) {
+  .form_dates_details_paragraph_day, .form_dates_details_paragraph_month, .form_dates_details_paragraph_year {
+    font-size: 12px;
+  }
+}
+.form_dates_button {
   text-align: center;
   margin: 10px 0;
 }
-.display-button span {
+.form_dates_button_line {
   width: 100%;
   background-color: hsl(0, 0%, 86%);
   display: inline-block;
@@ -85,51 +126,51 @@ footer {
   position: relative;
 }
 @media screen and (min-width: 720px) {
-  .display-button span {
-    top: 45px;
+  .form_dates_button_line {
+    top: 32px;
   }
 }
-.display-button-style {
+.form_dates_button_style {
   background-color: hsl(259, 100%, 65%);
   border-radius: 50%;
   border: none;
   position: relative;
 }
 @media screen and (min-width: 720px) {
-  .display-button-style {
+  .form_dates_button_style {
     left: 45%;
+    top: -10px;
   }
 }
-.display-button-style-svg {
+.form_dates_button_style svg {
   margin: 10px;
   width: 25px;
   height: 30px;
   font-weight: bold;
 }
 @media screen and (min-width: 720px) {
-  .display-button-style-svg {
+  .form_dates_button_style svg {
     width: 45px;
     height: 55px;
   }
 }
-
-.form-result {
+.form_result {
   font-size: 50px;
   font-style: italic;
   font-weight: 800;
   line-height: 60px;
 }
 @media screen and (min-width: 720px) {
-  .form-result {
+  .form_result {
     font-size: 65px;
     line-height: 75px;
   }
 }
-.form-result p {
+.form_result_content {
   margin: 0;
 }
-.form-result p #years,
-.form-result p #months,
-.form-result p #days {
+.form_result_content .years,
+.form_result_content .months,
+.form_result_content .days {
   color: hsl(259, 100%, 65%);
 }/*# sourceMappingURL=index.css.map */
